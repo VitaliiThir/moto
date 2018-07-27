@@ -1,0 +1,77 @@
+.header {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	@include b-ground;
+	&-top-lenta {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 72px;
+		background-color: $main-color;
+		&__item {
+			display: flex;
+			align-items: center;
+			height: 72px;
+			.main-logo {
+				width: 100%;
+			}
+			.soc-icon {
+				width: 25px;
+				background-color: transparent;
+			}
+		}
+		&__item--soc {
+			display: flex;
+			justify-content: space-between;
+			width: 180px;
+			a {
+				text-decoration: none;
+				transition: transform .4s;
+				border-radius: 50%;
+				background-color: transparent;
+				&:hover {
+					transform: translateY(-5px);
+				}
+			}
+		}
+	}
+	&-item {
+		position: relative;
+		color: #fff;
+		width: 41%;
+		right: -230px;
+		&__top-heading {
+			text-transform: uppercase;
+			font-size: 36px;
+		}
+		&__main-heading {
+			text-transform: uppercase;
+			font-size: 117.5px;
+			line-height: 117.5px;
+			font-weight: 900;
+		}
+		&__text {
+			line-height: 30px;
+			font-size: 20px;
+		}
+		&__button {
+			display: flex;
+			margin-top: rem(45px);
+			a {
+				background-color: $main-color;
+				color: #fff;
+				padding: rem(18px) rem(32px);
+				text-transform: uppercase;
+				text-decoration: none;
+				text-align: center;
+				font-weight: bold;
+				font-size: rem(20px);
+			}
+		}
+	}
+}
+
