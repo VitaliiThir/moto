@@ -1,0 +1,337 @@
+@import "plagins/mixins";
+@import "plagins/rem";
+.dummy {
+	background-color: #1b1b1b;
+	color: #fff;
+	padding-bottom: 140px;
+	&-top-block {
+		position: relative;
+		background-color: $main-color;
+		padding-top: 60px;
+		padding-bottom: 50px;
+		margin-top: -70px;
+		&__heading {
+			text-transform: uppercase;
+			font-weight: bold;
+			margin-bottom: 55px;
+			font-size: rem(40px);
+		}
+		&__heading,
+		&__text {
+			padding-left: 50px;
+		}
+		&__text {
+			&-heading,
+			&-description {
+				margin-bottom: 30px;
+			}
+			&-heading {
+				font-weight: bold;
+				font-size: rem(30px);
+			}
+			&-description {
+				font-size: rem(17px);
+			}
+			&-button {
+				display: flex;
+				a {
+					color: #fff;
+					text-decoration: none;
+					text-transform: uppercase;
+					border: 1px solid #fff;
+					padding: rem(8px) rem(15px);
+					font-weight: bold;
+					font-size: rem(17.3px);
+					transition: all .3s;
+					&:hover {
+						background-color: #fff;
+						color: $main-color;
+						box-shadow: -10px 10px 30px -5px rgba(0, 0, 0, .5);
+					}
+					&:active {
+						background-color: $main-color;
+						color: #fff;
+						box-shadow: none;
+					}
+				}
+			}
+		}
+		&-slider {
+			position: relative;
+			margin-bottom: -100px;
+			&__item {
+				display: flex;
+				align-items: center;
+				height: 370px;
+				img {
+					display: block;
+					@include m-auto;
+					width: 90%;
+				}
+			}
+		}
+	}
+	&-block-description {
+		&__heading {
+			text-transform: uppercase;
+			font-weight: bold;
+			margin-top: 150px;
+			margin-bottom: 25px;
+			font-size: rem(51.3px);
+		}
+		&__text {
+			font-size: 20px;
+		}
+	}
+}
+.theme-1 .owl-buttons {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	top: 50%;
+	margin-top: -(25px/2);
+	left: 0;
+	right: 0;
+}
+.moto-block {
+	@include b-ground;
+	&-photos {
+		display: flex;
+		&__img {
+			@include b-ground;
+			flex-grow: 1;
+			height: 410px;
+		}
+		&__img--mt {
+			margin-top: -40px;
+		}
+	}
+	&-description {
+		margin-top: 120px;
+		&-item {
+			padding: 15px;
+			padding-bottom: 110px;
+			color: #fff;
+			&__heading {
+				text-transform: uppercase;
+				font-weight: bold;
+				margin-bottom: 35px;
+				font-size: 30px;
+			}
+			&__text {
+				margin-bottom: 45px;
+				font-size: 17px;
+			}
+			&__button {
+				display: flex;
+				a {
+					color: #fff;
+					text-transform: uppercase;
+					padding: rem(8px) rem(15px);
+					background-color: $main-color;
+					transition: all .3s;
+					text-decoration: none;
+					font-weight: bold;
+					font-size: 17.3px;
+					&:hover {
+						background-color: #fff;
+						color: $main-color;
+						box-shadow: -10px 10px 30px -5px rgba(0, 0, 0, .5);
+					}
+					&:active {
+						background-color: $main-color;
+						color: #fff;
+						box-shadow: none;
+					}
+				}
+			}
+		}
+	}
+}
+.reviews {
+	position: relative;
+	@include b-ground;
+	padding-top: 80px;
+	padding-bottom: 50px;
+	&::after {
+		position: absolute;
+		content: "";
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background-color: rgba(#000, .8);
+		z-index: 0;
+	}
+	&-slider {
+		position: relative;
+		z-index: 1;
+		&-content {
+			color: #fff;
+			&__photo {
+				width: 118px;
+				height: 118px;
+				border-radius: 50%;
+				@include m-auto;
+				@include b-ground;
+				margin-bottom: 45px;
+			}
+			&__text,
+			&__address {
+				font-weight: 300;
+				font-style: italic;
+				margin-bottom: 40px;
+				font-size: 20px;
+			}
+			&__text {
+				margin-bottom: 40px;
+			}
+			&__name {
+				font-weight: bold;
+				text-transform: uppercase;
+				font-size: 20px;
+			}
+		}
+	}
+}
+.theme-2 .owl-buttons {
+	position: relative;
+	.owl-prev {
+		position: absolute;
+		right: 20px;
+	}
+}
+.theme-3 .owl-buttons {
+	position: relative;
+	.owl-next {
+		position: absolute;
+		left: 20px;
+	}
+}
+.block-examples {
+	@include b-ground;
+	padding-top: 170px;
+	padding-bottom: 145px;
+	color: #fff;
+	&__heading {
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-bottom: 40px;
+		font-size: 40px;
+	}
+	&__text {
+		margin-bottom: 60px;
+		font-size: 20px;
+	}
+	&-slider {
+		position: relative;
+		&__item {
+			position: relative;
+			@include b-ground;
+			@include m-auto;
+			width: 250px;
+			height: 230px;
+			margin-bottom: 30px;
+			&--fans {
+				position: absolute;
+				display: block;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+			&-button {
+				position: absolute;
+				display: flex;
+				left: 0;
+				right: 0;
+				justify-content: center;
+				bottom: -20px;
+				a {
+					text-transform: uppercase;
+					text-align: center;
+					color: #fff;
+					font-weight: bold;
+					text-decoration: none;
+					transition: all .3s;
+					background-color: $main-color;
+					padding: rem(10px) rem(25px);
+					font-size: 17px;
+					&:hover {
+						background-color: #fff;
+						color: $main-color;
+						box-shadow: -10px 10px 30px -5px rgba(0, 0, 0, .5);
+					}
+					&:active {
+						background-color: $main-color;
+						color: #fff;
+						box-shadow: none;
+					}
+				}
+			}
+		}
+	}
+}
+.theme-4 .owl-buttons {
+	position: absolute;
+	left: -25px;
+	right: -25px;
+	display: flex;
+	justify-content: space-between;
+	top: 50%;
+	margin-top: -(25px/2);
+}
+.club-blog {
+	display: flex;
+	&-description,
+	&-img {
+		width: 33.33333%;
+	}
+	&-description {
+		background-color: $main-color;
+		color: #fff;
+		padding-top: 148px;
+		padding-bottom: 125px;
+		padding-left: 70px;
+		padding-right: 40px;
+		&__heading {
+			text-transform: uppercase;
+			font-weight: bold;
+			margin-bottom: 40px;
+			font-size: 40px;
+		}
+		&__text {
+			margin-bottom: 40px;
+			font-size: 20px;
+		}
+		&__button {
+			display: flex;
+			a {
+				text-transform: uppercase;
+				color: #fff;
+				border: 1px solid #fff;
+				text-decoration: none;
+				font-weight: bold;
+				transition: all .3s;
+				padding: rem(8px) rem(15px);
+				font-size: 17.3px;
+				&:hover {
+					background-color: #fff;
+					color: $main-color;
+					box-shadow: -10px 10px 30px -5px rgba(0, 0, 0, .5);
+				}
+				&:active {
+					background-color: $main-color;
+					color: #fff;
+					box-shadow: none;
+				}
+			}
+		}
+	}
+	&-img {
+		&__photo {
+			@include b-ground;
+			height: 50%;
+		}
+	}
+}
