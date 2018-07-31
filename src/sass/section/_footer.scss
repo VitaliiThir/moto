@@ -43,13 +43,6 @@
 			font-weight: bold;
 			font-size: 25px;
 		}
-		ul {
-			list-style: none;
-			padding-left: 0;
-			li {
-				margin-bottom: 0;
-			}
-		}
 		&__description {
 			color: #858585;
 			margin-bottom: 50px;
@@ -58,6 +51,7 @@
 		}
 		&__button {
 			display: flex;
+			margin-bottom: 60px;
 			a {
 				text-transform: uppercase;
 				text-align: center;
@@ -79,9 +73,15 @@
 					box-shadow: none;
 				}
 			}
+			@include min-width(992px) {
+				margin-bottom: 0;
+			}
 		}
-		&__list {
-			&-events {
+		&-list {
+			list-style: none;
+			padding-left: 0;
+			&__events {
+				margin-bottom: 0;
 				&-data {
 					height: 65px;
 					display: flex;
@@ -101,6 +101,7 @@
 						}
 						&-number {
 							color: #fff;
+							font-weight: bold;
 							line-height: 35px;
 							font-size: 35px;
 						}
@@ -125,19 +126,53 @@
 			}
 		}
 		&-contacts {
-			&__phone {}
-			&__address-heading {}
-			&__address {}
+			padding-left: 0;
+			list-style: none;
+			&__phone {
+				color: #fff;
+				margin-bottom: rem(32px);
+				font-weight: bold;
+				font-size: rem(35px);
+				@include min-width(992px) {
+					font-size: rem(43px);
+				}
+			}
+			&__address-heading {
+				color: #fff;
+				text-transform: uppercase;
+				margin-bottom: rem(10px);
+				font-size: rem(17px);
+			}
+			&__address {
+				color: #858585;
+				margin-bottom: rem(7px);
+			}
 			&-data {
+				display: flex;
+				margin-top: rem(40px);
+				font-size: rem(17px);
 				&__email {
+					color: #fff;
 					&-description {
-						&-text {}
+						color: #858585;
+						margin-left: rem(25px);
+						&-text {
+							margin-bottom: rem(5px);
+						}
 					}
 				}
 			}
 		}
 	}
 	&-bottom {
-		&__text {}
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #222222;
+		height: rem(75px);
+		&__text {
+			color: #fff;
+			font-size: 15px;
+		}
 	}
 }

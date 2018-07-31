@@ -8,13 +8,17 @@
 		position: relative;
 		background-color: $main-color;
 		padding-top: 60px;
-		padding-bottom: 50px;
-		margin-top: -70px;
+		padding-bottom: 20px;
+		top: -70px;
 		&__heading {
 			text-transform: uppercase;
 			font-weight: bold;
-			margin-bottom: 55px;
-			font-size: rem(40px);
+			font-size: rem(33px);
+			margin-bottom: 15px;
+			@include min-width(992px){
+				font-size: rem(40px);
+				margin: 0;
+			}
 		}
 		&__heading,
 		&__text {
@@ -58,16 +62,23 @@
 		}
 		&-slider {
 			position: relative;
-			margin-bottom: -100px;
+			bottom: -40px;		
 			&__item {
-				display: flex;
-				align-items: center;
-				height: 370px;
+				width: 80%;
+				@include m-auto;
+				height: 420px;
 				img {
 					display: block;
 					@include m-auto;
-					width: 90%;
+					width: 100%;
 				}
+				@include min-width(992px){
+					width: auto;
+					margin: auto;
+				}
+			}
+			@include min-width(992px){
+				bottom: -90px;
 			}
 		}
 	}
@@ -75,23 +86,38 @@
 		&__heading {
 			text-transform: uppercase;
 			font-weight: bold;
-			margin-top: 150px;
+			margin-top: 60px;
 			margin-bottom: 25px;
-			font-size: rem(51.3px);
+			font-size: rem(36px);
+			@include min-width(992px){
+				margin-top: 80px;
+				font-size: rem(41.3px);
+			}
+			@include min-width(1200px){
+				margin-top: 150px;
+				font-size: rem(51.3px);
+			}
 		}
 		&__text {
 			font-size: 20px;
 		}
 	}
 }
-.theme-1 .owl-buttons {
+.theme-1 .owl-nav {
 	position: absolute;
 	display: flex;
 	justify-content: space-between;
 	top: 50%;
 	margin-top: -(25px/2);
-	left: 0;
-	right: 0;
+	left: 25px;
+	right: 25px;
+	@include min-width(992px){
+		left: -25px;
+		right: -25px;
+	}
+	button {
+		outline: none;
+	}
 }
 .moto-block {
 	@include b-ground;
@@ -100,7 +126,13 @@
 		&__img {
 			@include b-ground;
 			flex-grow: 1;
-			height: 410px; 
+			height: 210px;
+			@include min-width(992px) {
+				height: 270px;
+			}
+			@include min-width(1200px) {
+				height: 410px;
+			} 
 		}
 		&__img--mt {
 			margin-top: -40px;
@@ -160,7 +192,7 @@
 		bottom: 0;
 		right: 0;
 		left: 0;
-		background-color: rgba(#000, .8);
+		background-color: rgba(#000, .6);
 		z-index: 0;
 	}
 	&-slider {
@@ -194,18 +226,14 @@
 		}
 	}
 }
-.theme-2 .owl-buttons {
+.theme-2 .owl-nav {
 	position: relative;
-	.owl-prev {
-		position: absolute;
-		right: 20px;
-	}
-}
-.theme-3 .owl-buttons {
-	position: relative;
-	.owl-next {
-		position: absolute;
-		left: 20px;
+	display: flex;
+	width: 140px;
+	@include m-auto;
+	justify-content: space-between;
+	button {
+		outline: none;
 	}
 }
 .block-examples {
@@ -216,12 +244,12 @@
 	&__heading {
 		text-transform: uppercase;
 		font-weight: bold;
-		margin-bottom: 40px;
-		font-size: 40px;
+		margin-bottom: rem(40px);
+		font-size: rem(40px);
 	}
 	&__text {
-		margin-bottom: 60px;
-		font-size: 20px;
+		margin-bottom: rem(60px);
+		font-size: rem(20px);
 	}
 	&-slider {
 		position: relative;
@@ -256,7 +284,7 @@
 					transition: all .4s;
 					background-color: $main-color;
 					padding: rem(10px) rem(25px);
-					font-size: 17px;
+					font-size: rem(17px);
 					&:hover {
 						background-color: #fff;
 						color: $main-color;
@@ -272,37 +300,79 @@
 		}
 	}
 }
-.theme-4 .owl-buttons {
+.theme-4 .owl-nav {
 	position: absolute;
-	left: -25px;
-	right: -25px;
+	left: 0;
+	right: 0;
 	display: flex;
 	justify-content: space-between;
 	top: 50%;
 	margin-top: -(25px/2);
+	@include min-width(992px) {
+		left: 0;
+		right: 0;
+	}
+	@include min-width(1200px) {
+		left: -25px;
+		right: -25px;
+	}
+	button {
+		outline: none;
+	}
 }
 .club-blog {
 	display: flex;
+	flex-wrap: wrap;
+	background-color: #000;
+	padding-bottom: 40px;
+	@include min-width(992px) {
+		padding-bottom: 0;
+	}
 	&-description,
 	&-img {
-		width: 33.33333%;
+		width: 100%;
+		@include min-width(992px) {
+			width: 33.33333%;
+		}
+	}
+	&-img {
+		width: 70%;
+		@include m-auto;
+		&__photo {
+			@include b-ground;
+			width: 100%;
+			margin-top: 20px;
+			height: 310px;
+			@include min-width(992px) {
+				margin: 0;
+				height: 50%;
+			}
+		}
 	}
 	&-description {
 		background-color: $main-color;
 		color: #fff;
-		padding-top: 148px;
-		padding-bottom: 125px;
+		padding-top: 50px;
+		padding-bottom: 30px;
 		padding-left: 70px;
 		padding-right: 40px;
+		@include min-width(992px) {
+			padding-top: 50px;
+			padding-bottom: 30px;
+		}
+		@include min-width(1200px) {
+			padding-top: 148px;
+			padding-bottom: 125px;
+		}
 		&__heading {
 			text-transform: uppercase;
 			font-weight: bold;
 			margin-bottom: 40px;
-			font-size: 40px;
+			font-size: rem(40px);
 		}
 		&__text {
-			margin-bottom: 40px;
-			font-size: 20px;
+			margin-bottom: rem(40px);
+			font-size: rem(20px);
 		}
 		&__button {
 			display: flex;
@@ -314,7 +384,7 @@
 				font-weight: bold;
 				transition: all .4s;
 				padding: rem(8px) rem(15px);
-				font-size: 17.3px;
+				font-size: rem(17.3px);
 				&:hover {
 					background-color: #fff;
 					color: $main-color;
@@ -328,12 +398,6 @@
 			}
 		}
 	}
-	&-img {
-		&__photo {
-			@include b-ground;
-			height: 50%;
-		}
-	}
 }
 .signup {
 	@include b-ground;
@@ -342,17 +406,32 @@
 	padding-bottom: 130px;
 	&__heading {
 		text-transform: uppercase;
-		margin-bottom: 45px;
-		font-size: 40px;
+		margin-bottom: rem(15px);
+		font-size: rem(40px);
+		text-align: center;
 		span {
 			font-weight: bold;
 		}
+		@include min-width(992px) {
+			margin-bottom: rem(45px);
+			text-align: left;
+		}
 	}
 	&__description {
-		font-size: 17px;
+		font-size: rem(17px);
+		text-align: center;
+		margin-bottom: 45px;
+		@include min-width(992px) {
+			text-align: left;
+			margin-bottom: 0;
+		}
 	}
 	.form {
-		width: 100%;
+		width: 70%;
+		@include m-auto;
+		@include min-width(992px) {
+			width: 100%;
+		}
 		&__name {
 			background-color: transparent;
 			border: 1px solid #fff;
@@ -360,7 +439,7 @@
 			opacity: 1;
 			padding: 15px 20px;
 			width: 70%;
-			font-size: 17px;
+			font-size: rem(17px);
 		}
 		&__button {
 			position: relative;
@@ -372,11 +451,12 @@
 			left: -4px;
 			bottom: -1px;
 			font-weight: bold;
-			font-size: 20px;
+			font-size: rem(20px);
 			background-color: $main-color;
 			transition: all .4s;
 			box-sizing: border-box;
 			border: 2px solid transparent;
+			cursor: pointer;
 			&:hover {
 				background-color: #fff;
 				color: $main-color;

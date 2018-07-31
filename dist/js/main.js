@@ -1,39 +1,65 @@
 $(function(){
 	$(".dummy-top-block-slider").owlCarousel({
-        navigation: true, // Show next and prev buttons
-        slideSpeed: 1200,
-        singleItem: true,
-        autoPlay: true,
+        nav: true,
+        navSpeed: 1200,
+        autoplaySpeed: 1200,
+        autoplayTimeout: 5000,
+        items: 1,
+        loop: true,
+        autoplay: true,
         pagination: false,
-        navigationText: ["<img src='img/sliders/slider-arrow-left.png'>", "<img src='img/sliders/slider-arrow-right.png'>"],
+        navText: ["<img src='img/sliders/slider-arrow-left.png'>", "<img src='img/sliders/slider-arrow-right.png'>"],
         theme: "theme-1"
-      });
-	$("#reviews-slider01").owlCarousel({
-        navigation: true, // Show next and prev buttons
-        slideSpeed: 1200,
-        singleItem: true,
-        autoPlay: true,
+    });
+	$("#reviews-slider").owlCarousel({
+        nav: true,
+        navSpeed: 1200,
+        margin: 40,
+        slidespeed: 1200,
+        loop: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            1200:{
+                items:2
+            }
+        },
+        autoplay: true,
+        autoplaySpeed: 1200,
+        autoplayTimeout: 5000,
         pagination: false,
-        navigationText: ["<img src='img/sliders/slider-arrow-left.png'>", ""],
+        navText: ["<img src='img/sliders/slider-arrow-left.png'>", "<img src='img/sliders/slider-arrow-right.png'>"],
         theme: "theme-2"
-      });
-	$("#reviews-slider02").owlCarousel({
-        navigation: true, // Show next and prev buttons
-        slideSpeed: 1200,
-        singleItem: true,
-        autoPlay: true,
-        pagination: false,
-        navigationText: ["", "<img src='img/sliders/slider-arrow-right.png'>"],
-        theme: "theme-3"
-      });
+    });
 	$(".block-examples-slider").owlCarousel({
-        navigation: true, // Show next and prev buttons
-        slideSpeed: 1200,
-        items: 4,
+        nav: true,
+        navSpeed: 1200,
+        responsive:{
+            0:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            },
+            1200:{
+                items:4
+            }
+        },
+        loop: true,
         singleItem: false,
-        autoPlay: true,
+        autoplay: true,
+        autoplaySpeed: 1200,
+        autoplayTimeout: 5000,
         pagination: false,
-        navigationText: ["<img src='img/sliders/slider-arrow-left.png'>", "<img src='img/sliders/slider-arrow-right.png'>"],
+        navText: ["<img src='img/sliders/slider-arrow-left.png'>", "<img src='img/sliders/slider-arrow-right.png'>"],
         theme: "theme-4"
-      });
+    });
+    $('.c-hamburger').click(function(){
+        $(this).toggleClass('is-active');
+        $('.navigation').toggleClass('navigation--active');
+    });
 });
