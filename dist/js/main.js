@@ -5,6 +5,7 @@ $(function(){
         autoplaySpeed: 1200,
         autoplayTimeout: 5000,
         items: 1,
+        dots: false,
         loop: true,
         autoplay: true,
         pagination: false,
@@ -16,6 +17,7 @@ $(function(){
         navSpeed: 1200,
         margin: 40,
         slidespeed: 1200,
+        dots: false,
         loop: true,
         responsive:{
             0:{
@@ -35,6 +37,7 @@ $(function(){
 	$(".block-examples-slider").owlCarousel({
         nav: true,
         navSpeed: 1200,
+        dots: false,
         responsive:{
             0:{
                 items:1

@@ -34,8 +34,16 @@
 	}
 	&-content {
 		@include b-ground;
-		padding-top: 105px;
-		padding-bottom: 160px;
+		padding-top: 80px;
+		padding-bottom: 70px;
+		@include min-width(768px) {
+			padding-top: 80px;
+			padding-bottom: 100px;
+		}
+		@include min-width(992px) {
+			padding-top: 105px;
+			padding-bottom: 160px;
+		}
 		&__heading {
 			color: #fff;
 			text-transform: uppercase;
@@ -129,12 +137,25 @@
 			padding-left: 0;
 			list-style: none;
 			&__phone {
-				color: #fff;
-				margin-bottom: rem(32px);
-				font-weight: bold;
-				font-size: rem(35px);
-				@include min-width(992px) {
-					font-size: rem(43px);
+				a {
+					display: block;
+					color: #fff;
+					margin-bottom: rem(32px);
+					font-weight: bold;
+					font-size: rem(26px);
+					text-decoration: none;
+					border-bottom: 1px dotted rgba(#fff, .3);
+					transition: all .6s;
+					@include min-width(768px) {
+						font-size: rem(35px);
+					}
+					@include min-width(992px) {
+						font-size: rem(43px);
+					}
+					&:hover {
+						transform: translateX(10px);
+						opacity: .7;
+					}
 				}
 			}
 			&__address-heading {
@@ -149,14 +170,29 @@
 			}
 			&-data {
 				display: flex;
+				flex-wrap: wrap;
 				margin-top: rem(40px);
 				font-size: rem(17px);
+				@include min-width(768px) {
+					flex-wrap: nowrap;
+				}
 				&__email {
 					color: #fff;
 					&-description {
 						color: #858585;
 						margin-left: rem(25px);
 						&-text {
+							a {
+								display: block;
+								text-decoration: none;
+								color: #fff;
+								border-bottom: 1px dotted rgba(#fff, .3);
+								transition: all .6s;
+								&:hover {
+									transform: translateX(10px);
+									opacity: .7;
+								}
+							}
 							margin-bottom: rem(5px);
 						}
 					}
