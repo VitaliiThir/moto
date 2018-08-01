@@ -49,7 +49,7 @@ gulp.task("sass", function () {
 
 //IMG
 gulp.task("img", function () {
-    return gulp.src("./src/img/**/*.*")
+    return gulp.src("./dist/img/**/*.*")
         .pipe(gulp.dest("./dist/img"));
 });
 
@@ -67,9 +67,9 @@ gulp.task("watch", function () {
 
 //TINY PNG
 gulp.task('imagemin', function () {
-    gulp.src('./src/img/**/*.*')
-        .pipe(imagemin('iz7JbD3qcVT2ACUb9Gx0Bo5PL_qI38iK'))
-        .pipe(gulp.dest('./src/img'));
+    gulp.src('./dist/img/**/*.+(jpg|png)')
+        .pipe(imagemin('w7owmdLPsm8UuwYScuSYoHTmkqwnTawo'))
+        .pipe(gulp.dest('./dist/img'));
 });
 
 //DEFAULT

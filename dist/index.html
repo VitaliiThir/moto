@@ -15,6 +15,9 @@
  <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
  <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
  <link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.css">
+ <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.js">
+ <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css">
+ <link rel="stylesheet" href="libs/wow.js/animate.css">
  <link rel="stylesheet" href="css/main.css">
  <link rel="stylesheet" href="css/style.css">
 
@@ -36,9 +39,9 @@
      <div class="container">
       <div class="row justify-content-between">
         <div class="header-top-lenta__item">
-         <a href="#"><img src="img/main-logo.png" alt="logo" class="main-logo"></a>
+         <a href="#"><img src="img/main-logo.png" alt="logo" class="main-logo wow fadeIn"></a>
        </div>
-       <div class="header-top-lenta__item header-top-lenta__item--soc">
+       <div class="header-top-lenta__item header-top-lenta__item--soc wow fadeIn">
          <a href="#"><img class="soc-icon" src="img/facebook.svg" alt="web-icon"></a>
          <a href="#"><img class="soc-icon" src="img/twitter.svg" alt="web-icon"></a>
          <a href="#"><img class="soc-icon" src="img/instagram.svg" alt="web-icon"></a>
@@ -51,9 +54,9 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-9 offset-lg-3">
-        <h2 class="header-item__top-heading">Lorem Ipsum is simply dummy text</h2>
-        <h1 class="header-item__main-heading">Live to Ride</h1>
-        <p class="header-item__text">
+        <h2 class="header-item__top-heading wow fadeInDown">Lorem Ipsum is simply dummy text</h2>
+        <h1 class="header-item__main-heading wow fadeInUp">Live to Ride</h1>
+        <p class="header-item__text wow fadeIn">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown print
         </p>
         <div class="header-item__button"><a href="#">Learn More</a></div>
@@ -67,13 +70,13 @@
   </button>
   <ul class="navigation-list">
     <li class="navigation-list__link"><a href="#">home</a></li>
-    <li class="navigation-list__link"><a href="#">about us</a></li>
-    <li class="navigation-list__link"><a href="#">offer</a></li>
-    <li class="navigation-list__link"><a href="#">services</a></li>
-    <li class="navigation-list__link"><a href="#">listings</a></li>
-    <li class="navigation-list__link"><a href="#">blog</a></li>
-    <li class="navigation-list__link"><a href="#">contacts</a></li>
-    <li class="navigation-list__link"><a href="#">shop</a></li>
+    <li class="navigation-list__link"><a href="#aboutUs">about us</a></li>
+    <li class="navigation-list__link"><a href="#offer">offer</a></li>
+    <li class="navigation-list__link"><a href="#services">services</a></li>
+    <li class="navigation-list__link"><a href="#listings">listings</a></li>
+    <li class="navigation-list__link"><a href="#blog">blog</a></li>
+    <li class="navigation-list__link"><a href="#contacts">contacts</a></li>
+    <li class="navigation-list__link"><a href="#shop">shop</a></li>
   </ul>
 </nav>
 </header>
@@ -82,8 +85,8 @@
 <main>
   <section class="dummy">
     <div class="container">
-      <div class="dummy-top-block">
-        <h3 class="dummy-top-block__heading">Lorem Ipsum is simply dummy text</h3>
+      <div id="aboutUs" class="dummy-top-block">
+        <h3 class="dummy-top-block__heading wow fadeInDown">Lorem Ipsum is simply dummy text</h3>
         <div class="dummy-top-block-wrap">
           <div class="row">
             <div class="col-lg-4">
@@ -98,13 +101,13 @@
             <div class="col-lg-7">
               <div class="dummy-top-block-slider owl-carousel theme-1">
                 <div class="dummy-top-block-slider__item">
-                  <img src="img/sliders/top-slider-img001.png" alt="slider-photo">
+                  <a class="fancybox zoom" href="img/sliders/top-slider-img0001.jpg"><img src="img/sliders/top-slider-img001.png" alt="slider-photo"></a>
                 </div>
                 <div class="dummy-top-block-slider__item">
-                  <img src="img/sliders/top-slider-img002.png" alt="slider-photo">
+                  <a class="fancybox zoom" href="img/sliders/top-slider-img0002.jpg"><img src="img/sliders/top-slider-img002.png" alt="slider-photo"></a>
                 </div>
                 <div class="dummy-top-block-slider__item">
-                  <img src="img/sliders/top-slider-img003.png" alt="slider-photo">
+                  <a class="fancybox zoom" href="img/sliders/top-slider-img0003.jpg"><img src="img/sliders/top-slider-img003.png" alt="slider-photo"></a>
                 </div>
               </div>
             </div>
@@ -112,8 +115,8 @@
         </div>
       </div>
       <div class="dummy-block-description">
-        <h3 class="dummy-block-description__heading">Lorem Ipsum is simply dummy text</h3>
-        <p class="dummy-block-description__text">
+        <h3 id="offer" class="dummy-block-description__heading wow fadeInDown">Lorem Ipsum is simply dummy text</h3>
+        <p class="dummy-block-description__text wow fadeInUp">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries . 
         </p>
       </div>
@@ -123,17 +126,17 @@
   <!--MOTO BLOCK -->
   <section class="moto-block" style="background-image: url('../img/block-moto/block-moto-bg.jpg');">
     <div class="moto-block-photos">
-      <div class="moto-block-photos__img" style="background-image: url('../img/block-moto/block-moto-img01.jpg');"></div>
-      <div class="moto-block-photos__img moto-block-photos__img--mt" style="background-image: url('../img/block-moto/block-moto-img02.jpg');"></div>
-      <div class="moto-block-photos__img" style="background-image: url('../img/block-moto/block-moto-img03.jpg');"></div>
+      <div class="moto-block-photos__img wow fadeInLeft" style="background-image: url('../img/block-moto/block-moto-img01.jpg');"></div>
+      <div class="moto-block-photos__img moto-block-photos__img--mt wow fadeInUp" style="background-image: url('../img/block-moto/block-moto-img02.jpg');"></div>
+      <div class="moto-block-photos__img wow fadeInRight" style="background-image: url('../img/block-moto/block-moto-img03.jpg');"></div>
     </div>
     <div class="container">
       <div class="moto-block-description">
         <div class="row">
           <div class="col-lg-6">
-            <div class="moto-block-description-item">
-              <h4 class="moto-block-description-item__heading">Lorem Ipsum is simply dummy text Lorem Ipsum is simply</h4>
-              <p class="moto-block-description-item__text">
+            <div id="services" class="moto-block-description-item">
+              <h4 class="moto-block-description-item__heading wow fadeInDown">Lorem Ipsum is simply dummy text Lorem Ipsum is simply</h4>
+              <p class="moto-block-description-item__text wow fadeIn">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
               </p>
               <div class="moto-block-description-item__button"><a href="#">Learn More</a></div>
@@ -141,8 +144,8 @@
           </div>
           <div class="col-lg-6">
             <div class="moto-block-description-item">
-              <h4 class="moto-block-description-item__heading">Lorem Ipsum is simply dummy text Lorem Ipsum is simply</h4>
-              <p class="moto-block-description-item__text">
+              <h4 class="moto-block-description-item__heading wow fadeInDown">Lorem Ipsum is simply dummy text Lorem Ipsum is simply</h4>
+              <p class="moto-block-description-item__text wow fadeIn">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
               </p>
               <div class="moto-block-description-item__button"><a href="#">Learn More</a></div>
@@ -213,44 +216,44 @@
   <!-- BLOCK SLIDER -->
   <section class="block-examples" style="background-image: url('../img/examples-bg.jpg');">
     <div class="container">
-      <h3 class="block-examples__heading">Lorem Ipsum is simply dummy text of the printing</h3>
-      <p class="block-examples__text">
+      <h3 id="shop" class="block-examples__heading wow fadeInDown">Lorem Ipsum is simply dummy text of the printing</h3>
+      <p class="block-examples__text wow fadeIn">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not 
       </p>
       <div class="block-examples-slider owl-carousel theme-4">
         <div class="block-examples-slider__item" style="background-image: url('../img/sliders/bottom-slider-img001.jpg');">
-          <div class="block-examples-slider__item-button"><a href="#">click here</a></div>
+          <div class="block-examples-slider__item-button"><a class="fancybox zoom" href="img/sliders/bottom-slider-img0001.jpg">click here</a></div>
         </div>
         <div class="block-examples-slider__item" style="background-image: url('../img/sliders/bottom-slider-img002.jpg');">
-          <div class="block-examples-slider__item-button"><a href="#">click here</a></div>
+          <div class="block-examples-slider__item-button"><a class="fancybox zoom" href="img/sliders/bottom-slider-img0002.jpg">click here</a></div>
         </div>
         <div class="block-examples-slider__item" style="background-image: url('../img/sliders/bottom-slider-img003.jpg');">
-          <div class="block-examples-slider__item-button"><a href="#">click here</a></div>
+          <div class="block-examples-slider__item-button"><a class="fancybox zoom" href="img/sliders/bottom-slider-img0003.jpg">click here</a></div>
         </div>
         <div class="block-examples-slider__item" style="background-image: url('../img/sliders/bottom-slider-img004.jpg');">
-          <div class="block-examples-slider__item-button"><a href="#">click here</a></div>
+          <div class="block-examples-slider__item-button"><a class="fancybox zoom" href="img/sliders/bottom-slider-img0004.jpg">click here</a></div>
         </div>
         <div class="block-examples-slider__item" style="background-image: url('../img/sliders/bottom-slider-img005.jpg');">
-          <div class="block-examples-slider__item-button"><a href="#">click here</a></div>
+          <div class="block-examples-slider__item-button"><a class="fancybox zoom" href="img/sliders/bottom-slider-img005.jpg">click here</a></div>
         </div>
         <div class="block-examples-slider__item" style="background-image: url('../img/sliders/bottom-slider-img006.jpg');">
-          <div class="block-examples-slider__item-button"><a href="#">click here</a></div>
+          <div class="block-examples-slider__item-button"><a class="fancybox zoom" href="img/sliders/bottom-slider-img006.jpg">click here</a></div>
         </div>
         <div class="block-examples-slider__item" style="background-image: url('../img/sliders/bottom-slider-img007.jpg');">
-          <div class="block-examples-slider__item-button"><a href="#">click here</a></div>
+          <div class="block-examples-slider__item-button"><a class="fancybox zoom" href="img/sliders/bottom-slider-img007.jpg">click here</a></div>
         </div>
         <div class="block-examples-slider__item" style="background-image: url('../img/sliders/bottom-slider-img008.jpg');">
-          <div class="block-examples-slider__item-button"><a href="#">click here</a></div>
+          <div class="block-examples-slider__item-button"><a class="fancybox zoom" href="img/sliders/bottom-slider-img008.jpg">click here</a></div>
         </div>
       </div>
     </div>
   </section>
   <!-- END BLOCK SLIDER -->
   <!-- CLUB BLOG -->
-  <section class="club-blog">
+  <section id="blog" class="club-blog">
     <div class="club-blog-description">
-      <h4 class="club-blog-description__heading">club blog</h4>
-      <p class="club-blog-description__text">
+      <h4 class="club-blog-description__heading wow fadeInDown">club blog</h4>
+      <p class="club-blog-description__text wow fadeIn">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but
       </p>
       <div class="club-blog-description__button"><a href="#">learn more</a></div>
@@ -266,9 +269,9 @@
   </section>
   <!--END CLUB BLOG -->
   <!-- SIGNUP -->
-  <section class="signup" style="background-image: url('../img/signup-bg.jpg');">
+  <section id="listings" class="signup" style="background-image: url('../img/signup-bg.jpg');">
     <div class="container">
-      <h3 class="signup__heading"><span>signup</span> For Newsletter</h3>
+      <h3 class="signup__heading wow fadeInDown"><span>signup</span> For Newsletter</h3>
       <div class="row">
         <div class="col-lg-5">
           <p class="signup__description">
@@ -286,7 +289,7 @@
   </section>
   <!-- END SIGNUP -->
 </main>
-<footer class="footer">
+<footer id="contacts" class="footer">
   <div class="footer-top">
     <div class="footer-top-lenta">
      <div class="container">
@@ -400,8 +403,11 @@
   </p>
 </div>
 </footer>
+<div class="scroll-top"><a href="#top">наверх</a></div>
 <script src="libs/jquery/jquery.min.js"></script>
 <script src="libs/owl-carousel/owl.carousel.min.js"></script>
+<script src="libs/fancybox/jquery.fancybox.pack.js"></script>
+<script src="libs/wow.js/wow.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 
