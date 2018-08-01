@@ -15,7 +15,7 @@
     "gulp-concat": "latest",
     "gulp-cssnano": "latest",
     "gulp-notify": "latest",
-    "gulp-sass": "latest",
+    "gulp-sass": "^4.0.1",
     "gulp-tinypng": "^1.0.2"
   },
   "dependencies": {

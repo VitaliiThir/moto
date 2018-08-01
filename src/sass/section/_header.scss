@@ -187,7 +187,7 @@
 		&__link {
 			display: flex;
 			margin-bottom: 0;
-			a {
+			&-a {
 				text-transform: uppercase;
 				color: #fff;
 				padding: 10px;
@@ -196,6 +196,8 @@
 				&:hover {
 					transform: translateX(15px);
 					opacity: .7;
+					color: #fff;
+					text-decoration: none;
 				}
 				@include min-width(576px) {
 					padding: 15px;
@@ -315,3 +317,61 @@
 	transition-delay: 0s, 0.3s;
 }
 
+// NAVIGATION FIXED
+.nav-fixed {
+	background: -moz-linear-gradient(270deg, #ce0000 0%, #FF0000 46%, #4D0000 94%, #4D0000 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ce0000), color-stop(46%, #FF0000), color-stop(94%, #4D0000), color-stop(100%, #4D0000)); /* safari4+,chrome */
+	background: -webkit-linear-gradient(270deg, #ce0000 0%, #FF0000 46%, #4D0000 94%, #4D0000 100%);
+	background: -o-linear-gradient(270deg, #ce0000 0%, #FF0000 46%, #4D0000 94%, #4D0000 100%);
+	background: -ms-linear-gradient(270deg, #ce0000 0%, #FF0000 46%, #4D0000 94%, #4D0000 100%);
+	background: linear-gradient(180deg, #ce0000 0%, #FF0000 46%, #4D0000 94%, #4D0000 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce0000', endColorstr='#4D0000',GradientType=0 );
+	position: fixed;
+	display: flex;
+	align-items: center;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 70px;
+	z-index: 999;
+	.navigation-list {
+		position: static;
+		display: flex;
+		align-items: center;
+		margin: 0;
+		height: 100%;
+		@include m-auto;
+		width: auto;
+		padding: 0;
+		.navigation-list__link {
+			flex-grow: 1;
+			padding: 7px 25px;
+			height: 100%;
+			.navigation-list__link-a {
+				display: flex;
+				align-items: center;
+				padding: 0;
+				font-size: 18px;
+				transition: all .6s;
+				height: 100%;
+				width: 100%;
+				&:hover {
+					transform: translateY(-7px);
+					opacity: 1;
+					text-shadow: -12px 12px 4px rgba(#000, .7);
+				}
+			}
+		}
+	}
+}
+.nav-fixed-logo {
+	flex-grow: 1;
+	text-align: center;
+}
+.nav-fixed-icons {
+	flex-grow: 1;
+	justify-content: center;
+	.soc-icon {
+		margin-right: 20px;
+	}
+}
