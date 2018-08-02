@@ -49,6 +49,7 @@
 	}
 	&-content {
 		@include b-ground;
+		background-attachment: fixed;
 		padding-top: 80px;
 		padding-bottom: 70px;
 		@include min-width(768px) {

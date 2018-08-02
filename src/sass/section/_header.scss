@@ -378,6 +378,9 @@
 		}
 	}
 }
+.navigation-list__link-a--active {
+	transform: translateY(10px);
+}
 .nav-fixed-logo {
 	flex-grow: 1;
 	text-align: center;
