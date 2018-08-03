@@ -164,6 +164,7 @@
 	}
 	&-list {
 		position: absolute;
+		display: none;
 		list-style: none;
 		padding-left: 0;
 		margin-top: 80px;
@@ -362,12 +363,14 @@
 		.navigation-list__link-a {
 			display: flex;
 			align-items: center;
+			justify-content: center;
+			height: 100%;
+			width: 100px;
+			text-align: center;
 			padding: 0;
 			font-size: 14px;
 			font-weight: bold;
 			transition: all .6s;
-			height: 100%;
-			width: 100%;
 			&:hover {
 				transform: translateY(10px);
 				opacity: 1;
@@ -380,6 +383,7 @@
 }
 .navigation-list__link-a--active {
 	transform: translateY(10px);
+
 }
 .nav-fixed-logo {
 	flex-grow: 1;
